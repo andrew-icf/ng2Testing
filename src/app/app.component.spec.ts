@@ -14,21 +14,30 @@ describe('AppComponent', () => {
   });
 
   it('should create the app', async(() => {
+    //arrange
     let fixture = TestBed.createComponent(AppComponent);
     let app = fixture.debugElement.componentInstance;
+    //act
+    //assert
     expect(app).toBeTruthy();
   }));
 
-  it(`should have as title 'app works!'`, async(() => {
+  it(`should have as title 'Angular Testing Suite!'`, async(() => {
+    // arrange
     let fixture = TestBed.createComponent(AppComponent);
     let app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('app works!');
+    // act
+    //assert
+    expect(app.title).toEqual('Angular Testing Suite!');
   }));
 
   it('should render title in a h1 tag', async(() => {
+    //arrange
     let fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
     let compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('app works!');
+    //act
+    fixture.detectChanges();
+    //assert
+    expect(compiled.querySelector('h1').textContent).toContain('Angular Testing Suite!');
   }));
 });
